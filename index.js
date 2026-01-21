@@ -7,20 +7,28 @@ const { fetchPrayerTimes } = require('./scraper');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DATA_PATH = path.join(__dirname, 'data.json');
+const DATA_PATH = process.env.VERCEL ? path.join('/tmp', 'data.json') : path.join(__dirname, 'data.json');
 
 app.use(cors());
 app.use(express.json());
 
 // Verileri önbelleğe (cache) kaydetmek için yardımcı fonksiyon
 function saveData(data) {
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf8');
+    try {
+        fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf8');
+    } catch (err) {
+        console.error('Veri kaydedilemedi (Vercel kısıtlaması olabilir):', err.message);
+    }
 }
 
 // Kayıtlı veriyi oku
 function loadData() {
-    if (fs.existsSync(DATA_PATH)) {
-        return JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
+    try {
+        if (fs.existsSync(DATA_PATH)) {
+            return JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
+        }
+    } catch (err) {
+        console.error('Veri okunamadı:', err.message);
     }
     return null;
 }
@@ -30,9 +38,12 @@ async function updateVakitler() {
     console.log(`[${new Date().toLocaleString()}] Veriler güncelleniyor...`);
     try {
         const newData = await fetchPrayerTimes();
-        saveData(newData);
-        console.log('Güncelleme başarılı.');
-        return newData;
+        if (newData && Object.keys(newData).length > 0) {
+            saveData(newData);
+            console.log('Güncelleme başarılı.');
+            return newData;
+        }
+        throw new Error('Çekilen veri boş.');
     } catch (error) {
         console.error('Güncelleme hatası:', error.message);
         return null;
@@ -57,7 +68,7 @@ app.get('/api/refresh', async (req, res) => {
 // Ana API uç noktası
 app.get('/api/vakitler', async (req, res) => {
     let data = loadData();
-    
+
     // Eğer veri yoksa hemen çek
     if (!data) {
         data = await updateVakitler();
@@ -73,7 +84,7 @@ app.get('/api/vakitler', async (req, res) => {
 // Sunucuyu başlat
 app.listen(PORT, async () => {
     console.log(`Sunucu http://localhost:${PORT} adresinde çalışıyor.`);
-    
+
     // Başlangıçta veriyi kontrol et/yükle
     if (!loadData()) {
         await updateVakitler();
