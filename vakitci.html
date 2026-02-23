@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+<title>Karaman Merkez Namaz Vakitleri - Karaman Merkez Ezan Saatleri - Vakitci</title>
+<meta name="description" content="Karaman Merkez namaz vakitleri ve Karaman Merkez ezan saatleri. Namaz vakitleri, TC Diyanet İşleri Başkanlığı fetvalarına uygun olarak matematiksel yöntemlerle hesaplanmaktadır.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta property="og:url" content="https://www.vakitci.com/turkiye/karaman/karaman-merkez/">
+<link rel="canonical" href="https://www.vakitci.com/turkiye/karaman/karaman-merkez/">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link href="/style.css?ver=1.23" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div style="position:relative" >
+<header id="header">
+	<div id="vakit-img"></div>
+</header>
+<nav>
+	<div id="buttons">
+		<div><a href="https://www.vakitci.com" title="Namaz Vakitleri" class="button">Namaz Vakitleri</a></div>
+		<div class="sep"></div>
+		<div><a href="/namaz-nasil-kilinir/"  title="Namaz Nasıl Kılınır" class="button">Namaz Nasıl Kılınır?</a></div>
+		<form action="/konum-ara/" method="get" name="arama" id="arama">
+			<div><input type="submit" id="arama-button" value="" title="arama butonu"></div>
+			<div><input name="ara" id="ara" type="text" placeholder="Şehir Ara"></div>
+		</form>
+	</div>
+</nav>
+<main>
+	<div id="content" class="vakit-bg">
+	<div class="ic">
+		<div id="sol">
+			<span class="konum-baslik"><a href="https://www.vakitci.com/turkiye/karaman/karaman-merkez/"  title="Karaman Merkez namaz vakitleri">Karaman / Karaman Merkez</a></span>
+			<a href="https://www.vakitci.com/turkiye/karaman/karaman-merkez/aylik/" title="Karaman Merkez aylık namaz vakitleri" class="kucuk">Karaman Merkez Aylık Namaz Vakitleri</a>
+			<br><a href="https://www.vakitci.com/turkiye/karaman/karaman-merkez/imsakiye/" title="Karaman Merkez ramazan imsakiyesi 2024" class="kucuk kirmizi">Karaman Merkez Ramazan imsakiyesi</a>
+			<div class="seperator"></div>
+			<div><b>Okuyana göre Ezan seçiniz. </b></div>
+			<div>Ezan :
+				<select name="ezaner" id="ezaner" aria-label="ezan" onChange="if (!window.__cfRLUnblockHandlers) return false; degistir()" data-cf-modified-aeffe24868bfcbeef1af7034-="">
+					<option value="abdulkadir_sehitoglu"  >Abdulkadir Şehitoğlu</option>
+					<option value="m.ozcan_gunesdogdu"  >M. Özcan Güneşdoğdu</option>
+					<option value="remzi_er"  >Remzi Er</option>
+					<option value="ismail_cosar"  >İsmail Coşar</option>
+					<option value="ilhan_tok"  >İlhan Tok</option>
+					<option value="nurettin_okumus"  >Nurettin Okumuş</option>
+					<option value="mekke"  >Mekke Ezanı</option>
+					<option value="medine"  >Medine Ezanı</option>
+					<option value="kudus"  >Kudüs Ezanı</option>
+					<option value="abdussamed"  >Abdussamed</option>
+				</select>
+			</div>
+			<div id="controller">
+				<div><img src="/img/player-play.gif" width="19" height="19" onClick="if (!window.__cfRLUnblockHandlers) return false; play()" alt="Ezan Oku" data-cf-modified-aeffe24868bfcbeef1af7034-=""></div>
+				<div><img src="/img/player-pause.gif" width="19" height="19" onClick="if (!window.__cfRLUnblockHandlers) return false; pause()" alt="Ezanı Duraklat" data-cf-modified-aeffe24868bfcbeef1af7034-=""></div>
+				<div><img src="/img/player-stop.gif" width="19" height="19" onClick="if (!window.__cfRLUnblockHandlers) return false; stop()" alt="Ezanı Durdur" data-cf-modified-aeffe24868bfcbeef1af7034-=""></div>
+				<div>&nbsp;</div>
+				<div><img src="/img/player-sound-on.gif" width="19" height="19" onClick="if (!window.__cfRLUnblockHandlers) return false; mute()" id="sus" alt="Ezanı Sustur" data-cf-modified-aeffe24868bfcbeef1af7034-=""></div>
+				<div id="durum">Beklemede</div>
+				<audio id="Ezan" preload="auto"> 
+					<source src="/ezan/ezan.mp3">
+				</audio>
+			</div>
+			<div>
+				<input name="ezanoku" type="checkbox" id="ezanoku" value="1" checked onClick="if (!window.__cfRLUnblockHandlers) return false; fnc_ezanoku()" data-cf-modified-aeffe24868bfcbeef1af7034-="">
+				<label for="ezanoku">Vakti geldiğinde ezan oku</label>
+			</div>
+			<div class="seperator"></div>
+			<div id="tarih">
+							<div>
+					<span>Miladi :</span> 23 Şubat 2026 Pazartesi				</div>
+				<!--
+				<div>
+					<span>Hicri :</span> 				</div>
+				!-->
+			</div>
+		</div>
+		<div class="sep-sol"></div>
+		<div id="vakitler">
+			<div id="vakit" class="baslik"></div>
+			<div class="sep2"></div>
+			<div id="imsak" class="ezan-vakti">
+				<div>İmsak</div>
+				<div>06:01</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="gunes" class="ezan-vakti">
+				<div>Güneş</div>
+				<div>07:22</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="ogle" class="ezan-vakti">
+				<div>Öğle</div>
+				<div>13:08</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="ikindi" class="ezan-vakti">
+				<div>İkindi</div>
+				<div>16:12</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="aksam" class="ezan-vakti">
+				<div>Akşam</div>
+				<div>18:43</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="yatsi" class="ezan-vakti">
+				<div>Yatsı</div>
+				<div>19:56</div>
+			</div>
+			<div class="sep2"></div>
+			<div id="kalan"></div>
+			<div id="ikalan"></div>
+			<a href="/konum-bul/"><div class="button-konum">Otomatik Konum Bul</div></a>
+		</div>
+		<div class="sep-sag"></div>
+		<div id="sag">
+			<h1>Karaman Merkez Namaz Vakitleri</h1><b>Karaman Merkez namaz vakitleri</b> ve <b>Karaman Merkez ezan saatleri</b> T.C Diyanet İşleri Başkanlığı fetvalarına uygun olarak, matematiksel yöntemlerle hesaplanmaktadır.				<div class="seperator"></div>
+				<div>
+					<b>Ayet-i Kerime</b><br>
+					Ey iman edenler! Sabır ve namazla yardım isteyin. Şüphe yok ki Allah, sabredenlerle beraberdir.<br>
+					<span class='hadis'>Bakara 153</span>			
+				</div>
+		</div>
+	</div>
+</div>
+<div class="modul-serit">
+</div>
+<script type="aeffe24868bfcbeef1af7034-text/javascript">
+var Imsak = new Date("Mon Feb 23 06:01:00 2026");
+var Gunes = new Date("Mon Feb 23 07:22:00 2026");
+var Ogle = new Date("Mon Feb 23 13:08:00 2026");
+var Ikindi = new Date("Mon Feb 23 16:12:00 2026");
+var Aksam = new Date("Mon Feb 23 18:43:00 2026");
+var Yatsi = new Date("Mon Feb 23 19:56:00 2026");
+</script>
+<script src="/js/hesap.js?ver=1.01" type="aeffe24868bfcbeef1af7034-text/javascript"></script>
+<script type="aeffe24868bfcbeef1af7034-text/javascript">
+ilk();
+</script>
+	<div class="reklam">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="aeffe24868bfcbeef1af7034-text/javascript"></script>
+		<!-- vakitci - desktop -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-1016383332489375"
+			 data-ad-slot="6506426738"
+			 data-ad-format="auto"
+			 data-full-width-responsive="true"></ins>
+		<script type="aeffe24868bfcbeef1af7034-text/javascript">
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div id="info">
+	<h2>Namaz Vakitleri Nasıl Hesaplanır ?</h2>
+
+	<p>Namaz vakitlerinin belirlenmesinde temel ölçüt, güneşin gökyüzünde bulunduğu konum ve güneş ışınlarının düşme açısıdır. Güneşin doğuşu, tam tepe noktaya ulaşması ve batışı namaz vakitlerinin belirlenmesinde kullanılan en temel unsurlardır. Bunlara ek olarak güneş ışınlarının düşme açısı, gölge boyu, güneş doğmadan önce oluşan şafak ve güneş battıktan sonra oluşan kızıllık namaz vakitlerinin belirlenmesinde kullanılan diğer unsurlardır.</p>
+
+	<p>"Namaz vakitlerinin nasıl hesaplanır?" sorusunun en net yanıtı aşağıdaki hadis-i şerifte verilmiştir.</p>
+
+	<p>&quot;Her namazın vaktinin başlangıcı ve sonu vardır; öğle namazının ilk vakti güneşin batıya meylettiği zamandır, sonu ise ikindi vaktinin girmesidir. İkindinin ilk vakti, (eşyanın gölgesinin kendi misli olup) vaktinin girdiği andır, sonu ise, güneşin sarardığı zamandır. Akşamın ilk vakti güneşin battığı zamandır, sonu da, şafağın kaybolmasıdır. Yatsının ilk vakti şafağın kaybolduğu andır, sonu ise gece yarısıdır. Sabah namazının ilk vakti, fecrin zuhuru, sonu ise güneşin doğmasıdır.<br>
+	(Tirmizi, Salat, 114; Beyhaki;, Sünen-i Kübra, I/375-376)</p>
+
+	<p>Günümüzde yukarıdaki hadis ışığında, kullanılan astronomi verileri ve teknolojik araçlar namaz vakitlerinin ve ezan saatlerinin tam olarak belirlenmesini mümkün kılmaktadır. Herhangi bir konumun enlem ve boylam değerlerinin doğru olarak bilinmesi, istenen bir tarih ve saatte o noktaya düşecek olan güneş ışınlarının açısını ve dolayısıyla namaz vakitlerini matematiksel olarak hesaplamak için yeterlidir.</p>
+
+	<p>Vakitci.com namaz vakitlerini T.C Diyanet İşleri Başkanlığı'nın fetvalarına uygun olarak hesaplanmaktadır.</p>
+
+	<h2>Ezan Saatleri</h2>
+
+	<p>Ezan saati bir vaktin girdiği an, başka bir deyişle namaz vaktinin başladığı saattir. Hesaplanan namaz vaktinin ilk anı ezan saati olarak kabul edilir ve ezan tam bu saatte okunur. Genel olarak ezanın okunması söz konusu vaktin namazının kılınabileceği anlamına gelir. Camilerde ezanın bitişi ile birlikte vakit namazı kılınmaya başlanır. Ramazan ayı dışındaki dönemlerde sabah ezanı güneş doğmadan 1 saat önce okunur. Bu dönemde sabah ezanı geç okunmasına rağmen, sabah namazı imsak vakti girdikten hemen sonra kılınabilir.</p>
+
+	<h3>Sabah Namazı Vakti</h3>
+
+	<p>Gecenin sonunda doğu ufkunda diklemesine beyaz bir ışık görülür, yalancı şafak (fecr-i kazip) adı verilen bu ışık bir müddet sonra kaybolur ve ardından yine doğu ufkunda yanlamasına beyaz bir ışık görülür, gerçek şafak (fecr-i sadık) adı verilen bu ışığın görülmesi sabah namazı vaktinin girdiği anlamına gelir. Tan yerinin ağarması olarak da bilinen gerçek şafak ile başlayan sabah namazı vakti güneşin doğumuna kadar devam eder.</p>
+
+	<p>Güneş fiziksel olarak henüz ufuk çizgisinin altında olmasına rağmen atmosferin güneş ışığını kırması sonucunda gerçek şafak (fecr-i sadık) oluşur. T.C Diyanet İşleri Başkanlığı'na göre sabah namazı vaktinin girmesi için güneşin ufuğun 18 derece altında (-18&deg;) olması gerekir.</p>
+
+	<h3>Öğle Namazı Vakti</h3>
+
+	<p>Güneş ışınlarının namaz vakti hesaplanan konuma dik açı (90 derece) ile düşmeye başlamasına zeval vakti denir. Güneşin batıya meyletmesi ile öğle vakti başlar. Güneşin tam tepe noktasında olduğu süre içinde (zeval vakti) namaz kılınmaz ve bu vakitte cisimlerin doğu yönünde gölgesi yoktur. Güney ya da Kuzey yönde oluşan o anki gölge boyuna fey-i zeval denir. Cisimlerin gölgesi doğuya doğru düşmeye başladığı zaman öğle vakti girmiş olur. öğle vakti herhangi bir cismin gölge boyunun kendi boyuna (fey-i zeval hariç) ulaştığı vakte kadar devam eder.</p>
+
+	<p>Ebu Hanife'ye göre öğle vakti cismin gölgesi kendi boyunun iki katına (fey-i zeval hariç) ulaşıncaya kadar devam eder. İmam Ebu Yusuf ve İmam Muhammed'e göre ise cismin gölgesi kendi boyuna (fey-i zeval hariç) ulaşıncaya kadar devam eder. Her iki görüşe göre de namaz kılınabilir.</p>
+
+	<p>ülkemizde ve dünyanın birçok bölgesinde cismin gölge boyu fey-i zeval (güneş tam tepe noktada iken oluşan gölge boyu) hariç kendi boyuna ulaştığı zaman öğle vakti çıkmış ikindi vakti girmiş kabul edilir.</p>
+
+	<h3>İkindi Namazı Vakti</h3>
+
+	<p>öğle namazının vaktinin çıkması ile başlayan ikindi vakti, güneşin batışına kadar devam eder.<br>
+	Not: öğle namazı vakti konusunda da değindiğimiz gibi ikindi namazının başlangıcı konusunda iki farklı görüş bulunmaktadır. ülkemizde cismin gölge boyunun (fey-i zeval hariç) kendi boyuna ulaştığı zaman ikindi vakti başlamış kabul edilir.</p>
+
+	<h3>Akşam Namazı Vakti</h3>
+
+	<p>Güneşin batışı ile başlayan akşam vakti. Ufuktaki kızıllığın yok olmasına kadar devam eder.</p>
+
+	<p>İmam Ebu Yusuf, İmam Muhammed ve diğer üç mezhep imamına göre &nbsp;güneş battıktan sonra ufukta oluşan kızıllığın yok olması ile akşam vakti çıkar ve yatsı vakti girer. Ebu Hanife'ye göre ise kızıllıktan sonraki beyazlığında kaybolması ile akşam vakti çıkar. Her iki görüşe göre de namaz kılınabilir.</p>
+
+	<h3>Yatsı Namazı Vakti</h3>
+
+	<p>Akşam namazı vakti çıktıktan sonra başlayan yatsı namazı vakti, sabah namazı vaktinin girmesine yani tan yerinin ağarmasına kadar devam eder.</p>
+
+	<p>Güneş battıktan sonra oluşan kızıllığın yok olması yatsı vaktinin girdiği anlamına gelir. T.C Diyanet İşleri Başkanlığı'na göre yatsı namazı vaktinin girmesi için güneşin ufuğun 17 derece altında (-17&deg;) olması gerekir.</p>
+
+	<h2>Cuma Namazı Vakti</h2>
+
+	<p>Cuma namazı vakti, öğle namazı vakti ile aynıdır. Cuma günü güneşin tepe noktaya ulaşmasının ardından doğuya meyletmesi ile okunan öğle ezanı, cuma namazı vaktinin başlangıcını bildirir.</p>
+
+	<h3>Cuma Ezan Saati</h3>
+
+	<p>Cuma ezanı, cuma günü öğle namazı saatinde okunur. Cuma ezanından 30 ya da 45 dakika önce cuma selası okunur.</p>
+
+	<h2>Bayram Namazı Vakti</h2>
+
+	<p>Bayram namazı, bayramın 1. gününün sabahı, güneşin doğup gökyüzünde bir mızrak boyu (5 derece) yükselmesinden sonra kılınır (35 - 50 dakika sonra).</p>
+
+</div></main>
+<footer>
+	<div class="modul-serit">
+		<div class="footer">
+			<div class="sol">
+				<span><b>Vakitci</b> © 2006 - 2026 bir Bvt Bilişim markasıdır.</span>
+			</div>
+			<div class="sag">
+				<a href="https://www.vakitci.com/" title="namaz vakitleri" class="button">Namaz Vakitleri</a> - 
+				<a href="/sitene-ekle/" title="Sitene Namaz Vakti Ekle" class="button">Sitene Ekle</a> - 
+				<a href="/indir/" title="Vakitci İndir" class="button">Bvt Vakitci İndir </a> - 
+				<a href="/iletisim/" title="iletisim" class="button">İletişim</a> - 
+				<a href="/yardim/" title="yardım" class="button">Yardım</a>
+			</div> 
+		</div>
+	</div>
+</footer>
+<!-- Adhouse.pro - Vakitci.com - 728x90 Sticky -->
+<script src="https://ad.adhouse.pro/291.js" type="aeffe24868bfcbeef1af7034-text/javascript"></script>
+</div>	
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8YXDWZZ3D" type="aeffe24868bfcbeef1af7034-text/javascript"></script>
+<script type="aeffe24868bfcbeef1af7034-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z8YXDWZZ3D');
+</script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="aeffe24868bfcbeef1af7034-|49" defer></script></body>
+</html>

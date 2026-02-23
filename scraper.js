@@ -1,27 +1,27 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const URL = 'https://namazvakitleri.diyanet.gov.tr/tr-TR/9587/karaman-namaz-vakitleri';
+const URL = 'https://www.vakitci.com/turkiye/karaman/karaman-merkez/';
 
 /**
- * Diyanet web sitesinden namaz vakitlerini çeker.
+ * Vakitci sitesinden namaz vakitlerini çeker.
  */
 async function fetchPrayerTimes() {
     try {
         const { data } = await axios.get(URL, {
             headers: {
-                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1'
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
             }
         });
 
         const $ = cheerio.load(data);
         const prayerTimes = {};
 
-        // Günlük vakitleri üst kısımdan çekelim
-        // .tpt-cell yapısı: .tpt-title (vakit adı), .tpt-time (saat)
-        $('.tpt-cell').each((i, el) => {
-            const title = $(el).find('.tpt-title').text().trim().toLowerCase();
-            const time = $(el).find('.tpt-time').text().trim();
+        // Günlük vakitleri çekelim
+        // .ezan-vakti yapısı: ilk div (vakit adı), ikinci div (saat)
+        $('.ezan-vakti').each((i, el) => {
+            const title = $(el).find('div').first().text().trim().toLowerCase();
+            const time = $(el).find('div').last().text().trim();
 
             if (title && time) {
                 // Türkçe karakterleri temizleyip anahtar olarak kullanalım
@@ -37,8 +37,8 @@ async function fetchPrayerTimes() {
             }
         });
 
-        // Tarih bilgisini de alalım
-        const dateStr = $('.vakit-kalan-gun-text').text().trim();
+        // Tarih bilgisini alalım (#tarih div içindeki metin)
+        const dateStr = $('#tarih div').first().text().replace('Miladi :', '').trim();
         prayerTimes['tarih'] = dateStr || new Date().toLocaleDateString('tr-TR');
 
         return prayerTimes;
